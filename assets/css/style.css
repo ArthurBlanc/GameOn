@@ -571,3 +571,19 @@ footer {
 		opacity: 1;
 	}
 }
+
+.error-form {
+	color: red;
+	font-size: 0.8rem;
+	margin-top: 0.2rem;
+}
+
+#error-first,
+#error-last,
+#error-email,
+#error-birthdate,
+#error-quantity,
+#error-city,
+#error-term {
+	display: none;
+}

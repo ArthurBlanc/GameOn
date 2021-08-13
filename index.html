@@ -44,7 +44,7 @@
 				<div class="content">
 					<span class="close"></span>
 					<div class="modal-body">
-						<form id="form" name="reserve" action="index.html" method="get" onsubmit="return validate();">
+						<form id="form" name="reserve" action="index.html" method="get">
 							<div class="formData">
 								<label for="first">Prénom</label><br />
 								<input class="text-control" type="text" id="first" name="first" /><br />
@@ -123,6 +123,11 @@
 
 							<input class="btn-submit" type="submit" class="button" value="C'est parti" />
 						</form>
+
+						<div id="confirmation">
+							<h1>Merci ! Votre réservation a été reçue.</h1>
+							<button id="confirmation-btn-close" class="btn-close">Fermer</button>
+						</div>
 					</div>
 				</div>
 			</div>

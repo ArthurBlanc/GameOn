@@ -35,6 +35,9 @@ const errorQuantity = document.getElementById("error-quantity");
 const errorCity = document.getElementById("error-city");
 const errorTerm = document.getElementById("error-term");
 
+const confirmation = document.getElementById("confirmation");
+const confirmationCloseBtn = document.getElementById("confirmation-btn-close");
+
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
@@ -45,6 +48,8 @@ function launchModal() {
 
 // Issue #1 : close modal
 modalCloseBtn[0].addEventListener("click", closeModal);
+confirmationCloseBtn.addEventListener("click", closeModal);
+
 function closeModal() {
 	modalbg.style.display = "none";
 }
@@ -92,5 +97,11 @@ form.addEventListener("submit", (e) => {
 		formValidated = false;
 	} else {
 		errorTerm.style.display = "none";
+	}
+
+	// Issue #4 : confirmation message
+	if (formValidated) {
+		confirmation.style.display = "block";
+		form.style.display = "none";
 	}
 });

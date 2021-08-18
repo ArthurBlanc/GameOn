@@ -11,7 +11,7 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-const modalCloseBtn = document.getElementsByClassName("close");
+const modalCloseBtn = document.querySelectorAll(".close");
 
 const form = document.getElementById("form");
 const firstName = document.getElementById("first");
@@ -36,7 +36,7 @@ const errorCity = document.getElementById("error-city");
 const errorTerm = document.getElementById("error-term");
 
 const confirmation = document.getElementById("confirmation");
-const confirmationCloseBtn = document.getElementById("confirmation-btn-close");
+const confirmationCloseBtn = document.querySelectorAll(".btn-close");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -47,8 +47,8 @@ function launchModal() {
 }
 
 // Issue #1 : close modal
-modalCloseBtn[0].addEventListener("click", closeModal);
-confirmationCloseBtn.addEventListener("click", closeModal);
+modalCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
+confirmationCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
 function closeModal() {
 	modalbg.style.display = "none";

@@ -38,6 +38,10 @@ p {
 .header-logo {
 	float: left;
 	padding: 1rem 0;
+	width: 20%;
+}
+.header-logo img {
+	width: 100%;
 }
 .main-navbar {
 	float: right;
@@ -46,24 +50,25 @@ p {
 .topnav a {
 	float: left;
 	display: block;
-	color: #000000;
+	color: #000;
 	text-align: center;
-	padding: 1rem 1rem;
+	margin: 0.2rem 0.1rem;
+	padding: 0.4rem 0.8rem;
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-family: Roboto, sans-serif;
 }
 
 .topnav a:hover {
 	background-color: #ff0000;
 	color: #ffffff;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 }
 
 .topnav a.active {
 	background-color: #ff0000;
 	color: #ffffff;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 }
 
 .topnav .icon {
@@ -306,7 +311,7 @@ input {
 	margin: 0 auto;
 	border-radius: 0.5rem;
 	font-size: 1rem;
-	padding: 1rem 5rem;
+	padding: 0.8rem 3rem;
 	color: #fff;
 	cursor: pointer;
 	border: 0;
@@ -426,7 +431,7 @@ input {
 .btn-signup {
 	outline: none;
 	font-size: 1.2rem;
-	padding: 1rem 1.5rem;
+	padding: 0.8rem 1.5rem;
 	margin: 0;
 	margin-top: 4rem;
 }
@@ -460,14 +465,12 @@ footer {
 	html {
 		font-size: 2vw;
 	}
-	.header-logo {
-		width: 20%;
-	}
-	.header-logo img {
-		width: 100%;
+	.main-navbar {
+		padding: 0.5rem 0;
 	}
 	.topnav a {
 		padding: 0.5rem 0.5rem;
+		font-size: 1rem;
 	}
 	.topnav a.active {
 		border-radius: 0.5rem;
@@ -481,6 +484,39 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+	.content {
+		margin: 5% auto 0 auto;
+		margin-left: auto;
+		position: fixed;
+		top: auto;
+		right: auto;
+		left: auto;
+		bottom: 0;
+	}
+	.text-control {
+		height: 5vh;
+	}
+	label {
+		margin: 1vh 0 0.5vh 0;
+	}
+	#form {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		height: inherit;
+		padding-bottom: 2rem;
+	}
+	.modal-body {
+		height: 85vh;
+	}
+
 	html {
 		font-size: 4vw;
 	}
@@ -492,6 +528,7 @@ footer {
 	}
 	.header-logo img {
 		height: 1.5rem;
+		width: auto;
 	}
 	.topnav a {
 		display: none;
@@ -521,6 +558,7 @@ footer {
 		display: block;
 		text-align: center;
 		margin: 0.05rem 0;
+		border-radius: 0.5rem;
 	}
 	.responsive .main-navbar {
 		margin-top: 4rem;
@@ -566,7 +604,7 @@ footer {
 	.hero-section > .btn-signup {
 		display: block;
 		margin: 2rem auto 0.5rem;
-		padding: 1rem 3rem;
+		padding: 0.5rem 2.5rem;
 	}
 	.copyrights {
 		margin: 0.5rem 0;

@@ -19,7 +19,7 @@ Lien du projet : https://arthurblanc.github.io/ArthurBlanc_4_11082021/
 
 Développeur Front-end junior dans une PME spécialisée dans les conférences et les concours de jeux.
 
-Après avoir reçu des commentaires négatifs de la part d’utilisateurs, l’entreprise souhaite simplifier la page d’accueil du site permettant notamment de s’inscrire aux différents concours. Malheureusement le développeur en charge de la page d’accueil a quitté l’entreprise en plein milieu du projet, celui-ci avait déjà commencé à travailler sur la structure HTML, CSS et Javascript mais sans terminer le développement.
+L’entreprise souhaite simplifier la page d’accueil du site qui permet notamment de s’inscrire aux différents concours. Cependant, le développeur a quitté l’entreprise en plein milieu du projet, celui-ci avait déjà commencé à travailler sur la structure HTML, CSS et Javascript.
 
 Mon rôle a été de prendre le relais et de terminer le développement de cette page d’accueil et de rendre le formulaire d’inscription aux concours fonctionnel à l’aide de Javascript.
 

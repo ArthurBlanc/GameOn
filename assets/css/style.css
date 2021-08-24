@@ -457,6 +457,36 @@ input {
 .hero-section > .btn-signup {
 	display: none;
 }
+
+/* Errors message */
+.error-form {
+	color: red;
+	font-size: 0.8rem;
+	margin-top: 0.2rem;
+}
+
+#error-first,
+#error-last,
+#error-email,
+#error-birthdate,
+#error-quantity,
+#error-city,
+#error-term {
+	display: none;
+}
+
+/* Validation message */
+#confirmation {
+	margin: auto;
+	display: none;
+}
+
+#confirmation h1 {
+	text-align: center;
+	font-size: 2rem;
+	padding: 18rem 0;
+}
+
 footer {
 	margin: 0 1rem;
 }
@@ -484,45 +514,16 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-	.content {
-		margin: 5% auto 0 auto;
-		margin-left: auto;
-		position: fixed;
-		top: auto;
-		right: auto;
-		left: auto;
-		bottom: 0;
-	}
-	.text-control {
-		height: 5vh;
-	}
-	label {
-		margin: 1vh 0 0.5vh 0;
-	}
-	#form {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-ms-flex-direction: column;
-		flex-direction: column;
-		-webkit-box-pack: justify;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
-		height: inherit;
-		padding-bottom: 2rem;
-	}
-	.modal-body {
-		height: 85vh;
-	}
-
 	html {
 		font-size: 4vw;
 	}
 	main {
 		margin: 0 1rem 1rem 1rem;
 	}
+	label {
+		margin: 0.5vh 0 0.5vh 0;
+	}
+
 	.header-logo {
 		width: unset;
 	}
@@ -606,6 +607,72 @@ footer {
 		margin: 2rem auto 0.5rem;
 		padding: 0.5rem 2.5rem;
 	}
+	.content {
+		margin: 5% auto 0 auto;
+		margin-left: auto;
+		position: absolute;
+		top: auto;
+		right: auto;
+		left: auto;
+		bottom: 0;
+	}
+	#form {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		max-height: 91vh;
+		min-height: 85vh;
+	}
+	.text-control {
+		height: 5vh;
+	}
+
+	.error-form {
+		font-size: 0.69rem;
+	}
+
+	.text-label {
+		margin-top: 0.5rem;
+	}
+	.content {
+		margin: 5% auto 0 auto;
+		margin-left: auto;
+		position: absolute;
+		top: auto;
+		right: auto;
+		left: auto;
+		bottom: 0;
+	}
+	#form {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		max-height: 91vh;
+		min-height: 85vh;
+	}
+	.text-control {
+		height: 5vh;
+	}
+	.error-form {
+		font-size: 0.69rem;
+	}
+	.text-label {
+		margin-top: 0.5rem;
+	}
 	.copyrights {
 		margin: 0.5rem 0;
 		text-align: center;
@@ -642,33 +709,4 @@ footer {
 	to {
 		opacity: 1;
 	}
-}
-
-/* Errors message */
-.error-form {
-	color: red;
-	font-size: 0.8rem;
-	margin-top: 0.2rem;
-}
-
-#error-first,
-#error-last,
-#error-email,
-#error-birthdate,
-#error-quantity,
-#error-city,
-#error-term {
-	display: none;
-}
-
-/* Validation message */
-#confirmation {
-	margin: auto;
-	display: none;
-}
-
-#confirmation h1 {
-	text-align: center;
-	font-size: 2rem;
-	padding: 18rem 0;
 }

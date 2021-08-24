@@ -38,37 +38,42 @@ const errorTerm = document.getElementById("error-term");
 const confirmation = document.getElementById("confirmation");
 const confirmationCloseBtn = document.querySelectorAll(".btn-close");
 
-// launch modal event
+// Launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// launch modal form
+// Launch modal form
 function launchModal() {
 	modalbg.style.display = "block";
 }
 
 // Issue #1 : close modal
+// Close modal on click on X
 modalCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
+// Close modal on click on confirmation button
 confirmationCloseBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 
+// Close modal with a display="none"
 function closeModal() {
 	modalbg.style.display = "none";
 }
 
 // Issue #2 & #3 : form validation
+// Prevent submit if form is not validated
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
+	// Regex for form validation
 	const nameRegex = /^([A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ ,.'-]*){2}$/g;
 	const emailRegex = /(?=^.{5,255}$)^([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})$/g;
 	const birthdateRegex = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
 	const quantityRegex = /^[0-9]{1,2}$/g;
 
-	var formValidated = true;
+	var formValidated = true; // Need to be true to submit form
 
-	// Fonction pour verifier si le formulaire est bien validé
+	// Function to check form inputs with regex and add errors messages if inputs are not validated
 	function validateInput(input, regex, error, input) {
 		const validated = input.value.match(regex);
-		// Si l'input n'est pas validé, alors formValidated sera false
+		// If input is not validated : formValidated="false"
 		if (!validated) {
 			formValidated = false;
 			error.style.display = "block";
@@ -85,6 +90,7 @@ form.addEventListener("submit", (e) => {
 	validateInput(birthdate, birthdateRegex, errorBirthdate, birthdate);
 	validateInput(quantity, quantityRegex, errorQuantity, quantity);
 
+	// Check if one city is checked, if not add error message
 	if (!loc1.checked && !loc2.checked && !loc3.checked && !loc4.checked && !loc5.checked && !loc6.checked) {
 		errorCity.style.display = "block";
 		formValidated = false;
@@ -92,6 +98,7 @@ form.addEventListener("submit", (e) => {
 		errorCity.style.display = "none";
 	}
 
+	// Check if term is checked, if not add error message
 	if (!term.checked) {
 		errorTerm.style.display = "block";
 		formValidated = false;
@@ -100,6 +107,7 @@ form.addEventListener("submit", (e) => {
 	}
 
 	// Issue #4 : confirmation message
+	// If form is validated, hide form and show confirmation message
 	if (formValidated) {
 		confirmation.style.display = "block";
 		form.style.display = "none";
